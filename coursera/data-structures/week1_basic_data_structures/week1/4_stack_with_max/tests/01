@@ -1,0 +1,7 @@
+﻿5
+push 2
+push 1
+max
+pop
+max
+Output:

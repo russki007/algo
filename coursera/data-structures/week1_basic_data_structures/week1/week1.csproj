@@ -1,0 +1,104 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="3_network_simulation\tests\01" />
+    <None Remove="3_network_simulation\tests\01.a" />
+    <None Remove="3_network_simulation\tests\02" />
+    <None Remove="3_network_simulation\tests\02.a" />
+    <None Remove="3_network_simulation\tests\03" />
+    <None Remove="3_network_simulation\tests\03.a" />
+    <None Remove="3_network_simulation\tests\04" />
+    <None Remove="3_network_simulation\tests\04.a" />
+    <None Remove="3_network_simulation\tests\05" />
+    <None Remove="3_network_simulation\tests\05.a" />
+    <None Remove="3_network_simulation\tests\06" />
+    <None Remove="3_network_simulation\tests\06.a" />
+    <None Remove="3_network_simulation\tests\07" />
+    <None Remove="3_network_simulation\tests\07.a" />
+    <None Remove="3_network_simulation\tests\08" />
+    <None Remove="3_network_simulation\tests\08.a" />
+    <None Remove="3_network_simulation\tests\09" />
+    <None Remove="3_network_simulation\tests\09.a" />
+    <None Remove="3_network_simulation\tests\10" />
+    <None Remove="3_network_simulation\tests\10.a" />
+    <None Remove="3_network_simulation\tests\11" />
+    <None Remove="3_network_simulation\tests\11.a" />
+    <None Remove="3_network_simulation\tests\12" />
+    <None Remove="3_network_simulation\tests\12.a" />
+    <None Remove="3_network_simulation\tests\13" />
+    <None Remove="3_network_simulation\tests\13.a" />
+    <None Remove="3_network_simulation\tests\14" />
+    <None Remove="3_network_simulation\tests\14.a" />
+    <None Remove="3_network_simulation\tests\15" />
+    <None Remove="3_network_simulation\tests\15.a" />
+    <None Remove="3_network_simulation\tests\16" />
+    <None Remove="3_network_simulation\tests\16.a" />
+    <None Remove="3_network_simulation\tests\17" />
+    <None Remove="3_network_simulation\tests\17.a" />
+    <None Remove="3_network_simulation\tests\18" />
+    <None Remove="3_network_simulation\tests\18.a" />
+    <None Remove="3_network_simulation\tests\19" />
+    <None Remove="3_network_simulation\tests\19.a" />
+    <None Remove="3_network_simulation\tests\20" />
+    <None Remove="3_network_simulation\tests\20.a" />
+    <None Remove="3_network_simulation\tests\21" />
+    <None Remove="3_network_simulation\tests\21.a" />
+    <None Remove="3_network_simulation\tests\22" />
+    <None Remove="3_network_simulation\tests\22.a" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="3_network_simulation\tests\01" />
+    <EmbeddedResource Include="3_network_simulation\tests\01.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\02" />
+    <EmbeddedResource Include="3_network_simulation\tests\02.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\03" />
+    <EmbeddedResource Include="3_network_simulation\tests\03.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\04" />
+    <EmbeddedResource Include="3_network_simulation\tests\04.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\05" />
+    <EmbeddedResource Include="3_network_simulation\tests\05.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\06" />
+    <EmbeddedResource Include="3_network_simulation\tests\06.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\07" />
+    <EmbeddedResource Include="3_network_simulation\tests\07.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\08" />
+    <EmbeddedResource Include="3_network_simulation\tests\08.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\09" />
+    <EmbeddedResource Include="3_network_simulation\tests\09.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\10" />
+    <EmbeddedResource Include="3_network_simulation\tests\10.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\11" />
+    <EmbeddedResource Include="3_network_simulation\tests\11.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\12" />
+    <EmbeddedResource Include="3_network_simulation\tests\12.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\13" />
+    <EmbeddedResource Include="3_network_simulation\tests\13.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\14" />
+    <EmbeddedResource Include="3_network_simulation\tests\14.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\15" />
+    <EmbeddedResource Include="3_network_simulation\tests\15.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\16" />
+    <EmbeddedResource Include="3_network_simulation\tests\16.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\17" />
+    <EmbeddedResource Include="3_network_simulation\tests\17.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\18" />
+    <EmbeddedResource Include="3_network_simulation\tests\18.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\19" />
+    <EmbeddedResource Include="3_network_simulation\tests\19.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\20" />
+    <EmbeddedResource Include="3_network_simulation\tests\20.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\21" />
+    <EmbeddedResource Include="3_network_simulation\tests\21.a" />
+    <EmbeddedResource Include="3_network_simulation\tests\22" />
+    <EmbeddedResource Include="3_network_simulation\tests\22.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
+  </ItemGroup>
+</Project>

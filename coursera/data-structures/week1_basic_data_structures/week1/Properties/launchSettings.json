@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "week1": {
+      "commandName": "Project",
+      "commandLineArgs": "--test MaxSlidingWindow< $(ProjectDir)5_max_sliding_window\\tests\\01"
+    }
+  }
+}
