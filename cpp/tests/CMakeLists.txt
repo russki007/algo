@@ -25,4 +25,4 @@ endwhile()
 
 # Add preprocessor macro
 add_compile_definitions(TEST_DATA_PATH="${CMAKE_BINARY_DIR}")
-add_compile_definitions(UNIT_TESTS)
+add_compile_definitions(RUN_UNIT_TESTS)

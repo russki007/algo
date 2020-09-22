@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 project(cpp)
 enable_testing()
-#add_subdirectory(src/uva)
+add_subdirectory(src/uva)
 #add_subdirectory(src/hrk)
 add_subdirectory(src/samples)
 add_subdirectory(tests)

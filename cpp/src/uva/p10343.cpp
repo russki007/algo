@@ -71,7 +71,6 @@ public:
 		return bytes;
 	}
 
-
 	static std::string getString(std::vector<uint8_t> bytes) {
 		std::string str;
 		for (uint32_t n : bytes) {			
@@ -83,7 +82,7 @@ public:
 #endif // _BASE64_ENCODER_
 
 
-#if !defined UNIT_TESTS
+#if !defined RUN_UNIT_TESTS
 int main(int argc, char* argv[]) {
 	if (!cin) {
 		std::cerr << "Failed to open file" << std::endl;
