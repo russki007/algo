@@ -9,9 +9,23 @@ namespace hrk {
     class EntryPoint {
         private static readonly Assembly asm = Assembly.GetAssembly(typeof(EntryPoint));
         private static readonly string mainTest = "MainTest";
-        private static readonly string nameSpace = typeof(EntryPoint).Namespace;
-git
+        private static readonly string nameSpace = "hrk";
+        private static SortedSet<string> GetAllTestClasses() {
+            Type[] types = asm.GetTypes().Where(t => (t.IsPublic && t.GetMethod(mainTest) != null)).ToArray();
+            Regex genericType = new Regex(@"\w+`\d");
+            SortedSet<string> allNames = new SortedSet<string>();
+            foreach (var t0 in types) {
+                string name;
+                if (genericType.IsMatch(t0.Name)) {
+                    Match m = genericType.Match(t0.Name);
+                    name = m.Value;
+                    name = name.Substring(0, name.Length - 2);
+                }
+                else
+                    name = t0.Name;
 
+                allNames.Add(name);
+            }
             return allNames;
         }
 
@@ -73,8 +87,6 @@ TEST CASES
                             for (int i = 0; i < args.Length; i++) {
                                 testArgs[i] = args[i];
                             }
-
-
                             testMethod.Invoke(null, new object[] { testArgs });
                         }
                         else
