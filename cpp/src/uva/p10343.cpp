@@ -41,34 +41,8 @@ using std::cin;
 class Base64Encoder {
 public:
 	static std::vector<uint8_t> fromBase64String(std::string s) {
-		auto decode = [](unsigned int ch) -> int {
-			if (ch >= 'A' && ch <= 'Z') return ch - 'A' + 0;
-			if (ch >= 'a' && ch <= 'z') return ch - 'a' + 26;
-			if (ch == '+') return 62;
-			if (ch == '=') return 63;
-			return -1;
-		};
-			
-		std::vector<uint8_t> bytes;
-		for (int i = 0; i < s.length();) {
-			uint32_t g = 0;
-			int bits = 0;
-			for (int j = 0; j < 4; j++, i++) {
-				if (i >= s.length()) break;
-				int nCh = decode(s[i]);
-				if (nCh == -1) continue;
-				g <<= 6;
-				g |= nCh;
-				bits += 6;
-			}
-			g <<= 24 - bits;
-			for (int k = 0; k < bits/8; k++) {
-				bytes.push_back((g & 0x00FF0000) >> 16);
-				g <<= 8;
-			}
-		}
-
-		return bytes;
+		std::vector<uint8_t> res;
+		return res;
 	}
 
 	static std::string getString(std::vector<uint8_t> bytes) {

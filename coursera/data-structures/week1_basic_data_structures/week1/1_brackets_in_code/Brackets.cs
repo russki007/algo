@@ -4,16 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 
 namespace week1
-{
-    class Program
-    {
-        //static void Main(string[] args)
-        //{
-
-        //}
-    }
-
-
+{    
     public class Brackets
     {
         public static bool Parse(TextReader input,
@@ -29,5 +20,12 @@ namespace week1
     {
         public char Type { get; }
         public int Position { get; set; }
+    }
+
+
+    public class CheckBrackets
+    {
+        public static void MainTest(string[] args) {
+        }
     }
 }
