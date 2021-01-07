@@ -66,7 +66,7 @@ TEST CASES
 
         [STAThread]
         static void Main(string[] args) {
-            CommandLineApplication app = new CommandLineApplication(throwOnUnexpectedArg: true);
+            CommandLineApplication app = new CommandLineApplication(throwOnUnexpectedArg: false);
             var test = app.Option("-t | --test <class>", "Test Class", CommandOptionType.SingleValue);
             var list = app.Option("-l | --list", "List Test Class", CommandOptionType.NoValue);
             app.HelpOption("-? | -h | --help");
@@ -83,9 +83,9 @@ TEST CASES
                         string className = test.Value();
                         MethodInfo testMethod = GetMainTest(className);
                         if (testMethod != null) {
-                            string[] testArgs = new string[args.Length];
-                            for (int i = 0; i < args.Length; i++) {
-                                testArgs[i] = args[i];
+                            string[] testArgs = new string[app.RemainingArguments.Count];
+                            for (int i = 0; i < testArgs.Length; i++) {
+                                testArgs[i] = app.RemainingArguments[i];
                             }
                             testMethod.Invoke(null, new object[] { testArgs });
                         }
