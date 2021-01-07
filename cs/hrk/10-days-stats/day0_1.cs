@@ -34,7 +34,15 @@ namespace hrk {
             }
             (int Cnt, int Val) model = (0, 0);
             float mean = ((float)sum) / n;
-            float median = n % 2 == 0 ? (arr[n / 2 - 1] + arr[n / 2]) / (float)2 : arr[n / 2];
+
+
+            // float median = n % 2 == 0 ? (arr[n / 2 - 1] + arr[n / 2]) / (float)2 : arr[n / 2];
+            float median = arr[n / 2];
+            if ((n & 1) > 0) {
+                median += arr[n / 2 - 1];
+                median /= 2;
+            }
+
             for (int i = 0; i < h.Length; i++) {
                 //     if (h[i].Cnt > model.Cnt) {
                 //         model = h[i];
