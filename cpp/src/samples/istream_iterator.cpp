@@ -5,12 +5,17 @@
 #include <vector>
 #include <iostream>
 #include <filesystem>
+#include <numeric>
 
 
 using namespace std;
 using namespace filesystem;
 
 int main(int argc, char* argv[]) {
+	istream_iterator<int> in(cin), eof;
+	cout << accumulate(in, eof, 0) << endl;
+
+
 	path testDataPath { canonical("../../testData.txt") };
 	if (argc >= 2) {
 		testDataPath = path(argv[1]);

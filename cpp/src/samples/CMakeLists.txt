@@ -10,6 +10,7 @@ set(cxx_sources
     uniform_init.cpp
     allocation.cpp
     istream_iterator.cpp
+    accumulate.cpp
 )
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
