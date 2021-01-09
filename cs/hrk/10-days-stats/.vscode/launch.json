@@ -12,8 +12,8 @@
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/bin/Debug/net5.0/cs.dll",
             "args": [
-                "--test", "day1_1", 
-                "input_day1_1_0.txt"               
+                "--test", "day1_3", 
+                "input_day1_3_0.txt"               
             ],
             "cwd": "${workspaceFolder}",
             "console": "externalTerminal",
