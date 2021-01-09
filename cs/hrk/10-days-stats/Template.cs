@@ -1,3 +1,4 @@
+#define LOCAL_TEST
 using System;
 using System.IO;
 using System.Linq;
@@ -12,6 +13,9 @@ namespace hrk {
             }
             Console.WriteLine("Template");
         }
+#if !(LOCAL_TEST)
+        public static void Main(string[] args) => MainTest(args);
+#endif
     }
 }
 

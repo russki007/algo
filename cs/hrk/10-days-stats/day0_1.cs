@@ -38,7 +38,7 @@ namespace hrk {
 
             // float median = n % 2 == 0 ? (arr[n / 2 - 1] + arr[n / 2]) / (float)2 : arr[n / 2];
             float median = arr[n / 2];
-            if ((n & 1) > 0) {
+            if ((n & 1) == 0) {
                 median += arr[n / 2 - 1];
                 median /= 2;
             }
