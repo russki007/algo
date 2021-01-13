@@ -13,16 +13,13 @@ namespace hrk {
             return Array.ConvertAll(s.Split(), System.Int32.Parse);
         }
 
-        public const int X = 1, Y = 2, T = 0;
-
         static void GetDynamicArray(int n, List<int[]> queries, Action<int> progress) {
             List<int>[] seqList = new List<int>[n];
             for (int i = 0; i < n; i++) seqList[i] = new List<int>();
             int last = 0;
             foreach (int[] q in queries) {
-                int x = q[X], y = q[Y];
-                int i = (x ^ last) % n;
-                if (q[T] == 1) {
+                int x = q[1], y = q[2], i = (x ^ last) % n;
+                if (q[0] == 1) {
                     seqList[i].Add(y);
                     continue;
                 }
