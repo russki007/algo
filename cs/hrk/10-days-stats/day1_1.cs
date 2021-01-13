@@ -14,22 +14,24 @@ namespace hrk {
 
     public class Quartile {
         public uint Start { get; set; }
-        public Quartile(int start, int count) {
-        }
+        public Quartile(int start, int count) { }
     }
 
     public class day1_1 {
         static int[] ReadAllInts(bool sort = true) {
             //var arr = Array.ConvertAll(StdIn.ReadLine().Split(' '), System.Int32.Parse);
-            var arr = StdIn.ReadLine().Split().Select(int.Parse).ToArray();
+            var arr = StdIn.ReadLine().Split(' ', ',').Select(int.Parse).ToArray();
             if (sort) Array.Sort(arr);
             return arr;
         }
+
         static int ReadInt() => Int32.Parse(StdIn.ReadLine());
+
         public static void MainTest(string[] args) {
             if (args.Length > 0) {
                 StdIn.SetIn(File.OpenText(args[0]));
             }
+
             ReadInt();
             int[] arr = ReadAllInts();
             int n = arr.Length / 2;
@@ -43,6 +45,7 @@ namespace hrk {
                 m += arr[start + count / 2 - 1];
                 m /= 2;
             }
+
             return m;
         }
 
