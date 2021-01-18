@@ -36,7 +36,7 @@ namespace hrk {
         }
 
         static SinglyLinkedListNode RemoveDuplicates(SinglyLinkedListNode head) {
-            SinglyLinkedListNode cur = head, prev = null;
+            SinglyLinkedListNode cur = head;
             if (head == null) return null;
             while (cur.next != null) {
                 if (cur.next.data == cur.data) cur.next = cur.next.next;
